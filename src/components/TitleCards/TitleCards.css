@@ -10,6 +10,11 @@
     gap: 10px;
     overflow-x: scroll;
 }
+/* possibly unnecessary b/c it's hiding the scroll bar which doesn't really show up on this version */
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+/* ok it does hide it, but the scroll bar wasn't really offensive to begin with */
 .card-list img {
     width: 240px;
     border-radius: 4px;
