@@ -4,7 +4,7 @@ import cards_data from '../../assets/cards/Cards_data'
 
 const TitleCards = () => {
   return (
-    <div className='titlecards'>
+    <div className='title-cards'>
           <h2 className="">Popular on Netflix</h2>
           <div className="card-list">
               {cards_data.map((card, index) => {
