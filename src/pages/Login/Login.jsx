@@ -18,7 +18,7 @@ const Login = () => {
                   
                   <input type="email" placeholder="Email" className="" />
                   <input type="password" placeholder="Password" className="" />
-                  <button className="">Sign Up</button>
+                  <button className="">{signState}</button>
                   <div className="form-help">
                     <div className="remember">
                       <input type="checkbox" className="" />
