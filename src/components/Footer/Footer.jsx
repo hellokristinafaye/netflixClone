@@ -15,6 +15,21 @@ const Footer = () => {
               <img src={twitter_icon} alt="" className="" />
               <img src={youtube_icon} alt="" className="" />
           </div>
+          <ul className="">
+              <li className="">Audio Description</li>
+              <li className="">Help Center</li>
+              <li className="">Gift Cards</li>
+              <li className="">Media Center</li>
+              <li className="">Investor Relations</li>
+              <li className="">Jobs</li>
+              <li className="">Terms of Use</li>
+              <li className="">Privacy</li>
+              <li className="">Legal Notices</li>
+              <li className="">Cookie Preferences</li>
+              <li className="">Corporate Information</li>
+              <li className="">Contact Us</li>
+          </ul>
+          <p className="copyright-text">© 1997-2024 Netflix, Inc.</p>
     </div>
   )
 }
