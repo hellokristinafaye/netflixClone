@@ -28,7 +28,7 @@ const TitleCards = ({title, category}) => {
     // the wheel stuff seems depricated, but I do want this useEffect
         // cardsRef.current.addEventListener('wheel', handleWheel)
         
-        fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+        fetch(`https://api.themoviedb.org/3/movie/${category?category:'now_playing'}?language=en-US&page=1`, options)
          .then(response => response.json())
         // .then(response => console.log(response))
         .then(response => setApiData(response.results))
