@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './TitleCards.css'
 import cards_data from '../../assets/cards/Cards_data'
 
+
+
 const TitleCards = ({title, category}) => {
-  return (
+  
+    const cardsRef = useRef();
+
+    const handleWheel = (event) => {
+     event.preventDefault();
+     cardsRef.current.scrollLeft += event.deltaY;
+}
+
+    useEffect(() => {
+    // the wheel stuff seems depricated, but I do want this useEffect
+    // cardsRef.current.addEventListener('wheel', handleWheel)
+}, [])
+
+  
+    return (
     <div className='title-cards'>
           <h2 className="">{title?title:"Popular on Netflix"}</h2>
-          <div className="card-list">
+          <div className="card-list" ref={cardsRef}>
               {cards_data.map((card, index) => {
                   return <div className="card" key={index}>
                       <img src={card.image} alt="" className="" />
