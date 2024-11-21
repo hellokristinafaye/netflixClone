@@ -1,13 +1,18 @@
+// necessary for using React
 import React from 'react'
+// styling for this page
 import './Home.css'
+// components that I coded 
 import Navbar from '../../components/Navbar/Navbar'
+import TitleCards from '../../components/TitleCards/TitleCards'
+import Footer from '../../components/Footer/Footer'
+// assets. provided by Great Stack
 import hero_banner from '../../assets/hero_banner.jpg'
 import hero_title from '../../assets/hero_title.png'
 import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
-import TitleCards from '../../components/TitleCards/TitleCards'
-import Footer from '../../components/Footer/Footer'
 
+// so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
 const Home = () => {
   return (
       <div className='home'>

@@ -16,19 +16,18 @@ const Player = () => {
     })
 
     const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMjAxNC4zMTE1MjE4LCJzdWIiOiI2NzNhYjg3NGY3NDFlYjA0MjhiNjFmMjYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.HnikSMVXmScqffVt079FGhXMCtxyhFvRnyoFuvby7xg'
-  }
-};
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMjAxNC4zMTE1MjE4LCJzdWIiOiI2NzNhYjg3NGY3NDFlYjA0MjhiNjFmMjYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.HnikSMVXmScqffVt079FGhXMCtxyhFvRnyoFuvby7xg'
+        }
+    };
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
-    .then(res => res.json())
-     .then(res => setApiData(res.results[0]))
-    .catch(err => console.error(err));
-    
+        .then(res => res.json())
+        .then(res => setApiData(res.results[0]))
+        .catch(err => console.error(err));
      }, [])    
 
   return (

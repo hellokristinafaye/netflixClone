@@ -3,22 +3,20 @@ import './TitleCards.css'
 import cards_data from '../../assets/cards/Cards_data'
 import { Link } from 'react-router-dom'
 
-
 const TitleCards = ({title, category}) => {
   
     const [apiData, setApiData] = useState([]);
     const cardsRef = useRef();
 
     const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMjAxNC4zMTE1MjE4LCJzdWIiOiI2NzNhYjg3NGY3NDFlYjA0MjhiNjFmMjYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.HnikSMVXmScqffVt079FGhXMCtxyhFvRnyoFuvby7xg'
+        method: 'GET',
+        headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMjAxNC4zMTE1MjE4LCJzdWIiOiI2NzNhYjg3NGY3NDFlYjA0MjhiNjFmMjYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.HnikSMVXmScqffVt079FGhXMCtxyhFvRnyoFuvby7xg'
   }
 };
 
-
-
+    // possibly deprecated wheel code.  cannot test w/o hardware(mousewheel)
     const handleWheel = (event) => {
      event.preventDefault();
      cardsRef.current.scrollLeft += event.deltaY;
