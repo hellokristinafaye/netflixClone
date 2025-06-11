@@ -18,24 +18,26 @@ const Home = (index) => {
 
     const [apiData, setApiData] = useState([]);
 
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMTU1Ni41MzIsInN1YiI6IjY3M2FiODc0Zjc0MWViMDQyOGI2MWYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b-7ZA4uWx7YMTs_SUCTU3RMLAqY2DHCffSBNWLf-54g",
-      },
-    };
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMTU1Ni41MzIsInN1YiI6IjY3M2FiODc0Zjc0MWViMDQyOGI2MWYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b-7ZA4uWx7YMTs_SUCTU3RMLAqY2DHCffSBNWLf-54g",
+    },
+  };
+
+
 
    
     useEffect(() => {
-        fetch(
-          "https://api.themoviedb.org/3/tv/79026/videos?language=en-US",
-          options
-        )
-          .then((res) => res.json())
-          .then((res) => setApiData(res.id))
-          .catch((err) => console.error(err));
+         fetch(
+           "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+           options
+         )
+           .then((res) => res.json())
+           .then((res) => setApiData(res.results[0]))
+           .catch((err) => console.error(err));
  
     },[])
     
@@ -63,7 +65,7 @@ const Home = (index) => {
             {/* <p className=""> {apiData.results}</p> */}
 
             <Link
-              to={`/player/${apiData}`}
+              to={`/player/${apiData.id}`}
               className="card"
               key={index}
             >
