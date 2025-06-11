@@ -36,7 +36,7 @@ const Home = (index) => {
            options
          )
            .then((res) => res.json())
-           .then((res) => setApiData(res.results[0]))
+           .then((res) => setApiData(res.results[3]))
            .catch((err) => console.error(err));
  
     },[])
