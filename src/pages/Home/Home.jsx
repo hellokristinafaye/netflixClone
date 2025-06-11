@@ -15,7 +15,25 @@ import { Link } from 'react-router-dom'
 
 // so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
 const Home = (index) => {
-    
+
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NWM2YWJhY2RmNjcwNGRmYzFkNDNkNGIzYzc4MTc2ZiIsIm5iZiI6MTczMTkwMTU1Ni41MzIsInN1YiI6IjY3M2FiODc0Zjc0MWViMDQyOGI2MWYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b-7ZA4uWx7YMTs_SUCTU3RMLAqY2DHCffSBNWLf-54g",
+      },
+    };
+
+    fetch(
+      "https://api.themoviedb.org/3/search/tv?query=the%20protector&include_adult=false&language=en-US&page=1",
+      options
+    )
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+
+
   return (
     <div className="home">
       <Navbar />
@@ -29,7 +47,7 @@ const Home = (index) => {
             immortal enemy.
           </p>
           <div className="hero-btns">
-            <Link to={`/player/79026`} className="card" key={index}>
+            <Link to={`/player2/`} className="card" key={index}>
               <button className="btn">
                 <img src={play_icon} alt="" className="" />
                 Play
