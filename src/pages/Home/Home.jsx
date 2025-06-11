@@ -56,13 +56,7 @@ const Home = (index) => {
             immortal enemy.
           </p>
           <div className="hero-btns">
-            {/* {apiData.map((card, index) => {
-                          return <div className="" key={index}>
-                              <p className="">{card.original_title }</p>
-                        </div>
-                    })}
-                       */}
-            {/* <p className=""> {apiData.results}</p> */}
+        
 
             <Link
               to={`/player/${apiData.id}`}
