@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom'
 
 // so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
 const Home = (index) => {
+    
   return (
     <div className="home">
       <Navbar />

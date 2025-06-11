@@ -16,14 +16,8 @@ const TitleCards = ({title, category}) => {
   }
 };
 
-    // possibly deprecated wheel code.  cannot test w/o hardware(mousewheel)
-    const handleWheel = (event) => {
-     event.preventDefault();
-     cardsRef.current.scrollLeft += event.deltaY;
-}
-
+ 
     useEffect(() => {
-    // the wheel stuff seems depricated, but I do want this useEffect
         // cardsRef.current.addEventListener('wheel', handleWheel)
         
         fetch(`https://api.themoviedb.org/3/movie/${category?category:'now_playing'}?language=en-US&page=1`, options)
