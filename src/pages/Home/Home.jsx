@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'
 // so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
 const Home = (index) => {
 
-    const [apiData, setApiData] = useState([])
+    const [apiData, setApiData] = useState([]);
 
     const options = {
       method: "GET",
@@ -27,14 +27,16 @@ const Home = (index) => {
       },
     };
 
+   
     useEffect(() => {
-       fetch(
-      "https://api.themoviedb.org/3/search/tv?query=the%20protector&include_adult=false&language=en-US&page=1",
-      options
-    )
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err)); 
+        fetch(
+          "https://api.themoviedb.org/3/tv/79026/videos?language=en-US",
+          options
+        )
+          .then((res) => res.json())
+          .then((res) => setApiData(res.id))
+          .catch((err) => console.error(err));
+ 
     },[])
     
 
@@ -52,7 +54,19 @@ const Home = (index) => {
             immortal enemy.
           </p>
           <div className="hero-btns">
-            <Link to={`/player2/`} className="card" key={index}>
+            {/* {apiData.map((card, index) => {
+                          return <div className="" key={index}>
+                              <p className="">{card.original_title }</p>
+                        </div>
+                    })}
+                       */}
+            {/* <p className=""> {apiData.results}</p> */}
+
+            <Link
+              to={`/player/${apiData}`}
+              className="card"
+              key={index}
+            >
               <button className="btn">
                 <img src={play_icon} alt="" className="" />
                 Play
