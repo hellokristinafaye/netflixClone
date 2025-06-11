@@ -14,7 +14,7 @@ import info_icon from '../../assets/info_icon.png'
 import { Link } from 'react-router-dom'
 
 // so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
-const Home = () => {
+const Home = (index) => {
   return (
     <div className="home">
       <Navbar />
@@ -28,12 +28,13 @@ const Home = () => {
             immortal enemy.
           </p>
           <div className="hero-btns">
-            <Link to={`/player/`} className="card" >
+            <Link to={`/player/79026`} className="card" key={index}>
               <button className="btn">
                 <img src={play_icon} alt="" className="" />
                 Play
               </button>
             </Link>
+
             <button className="btn dark-btn">
               <img src={info_icon} alt="" className="" />
               More Info
