@@ -1,5 +1,5 @@
 // necessary for using React
-import React from 'react'
+import React, { useEffect } from 'react'
 // styling for this page
 import './Home.css'
 // components that I coded 
@@ -25,13 +25,16 @@ const Home = (index) => {
       },
     };
 
-    fetch(
+    useEffect(() => {
+       fetch(
       "https://api.themoviedb.org/3/search/tv?query=the%20protector&include_adult=false&language=en-US&page=1",
       options
     )
       .then((res) => res.json())
       .then((res) => console.log(res))
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err)); 
+    },[])
+    
 
 
   return (
