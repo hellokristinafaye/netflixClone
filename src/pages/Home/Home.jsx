@@ -1,5 +1,5 @@
 // necessary for using React
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 // styling for this page
 import './Home.css'
 // components that I coded 
@@ -15,6 +15,8 @@ import { Link } from 'react-router-dom'
 
 // so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
 const Home = (index) => {
+
+    const [apiData, setApiData] = useState([])
 
     const options = {
       method: "GET",
