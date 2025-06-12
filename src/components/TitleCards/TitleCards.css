@@ -2,17 +2,18 @@
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.title-cards h2 {
+/* .title-cards h2 {
     margin-bottom: 8px;
-}
+} */
 .card-list {
     display: flex;
     gap: 10px;
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding-top: 10px;
 }
-.card-image {
-    width: 100%;
-        object-fit: cover;
+.card {
+
         margin-right: 5px;
         transition: transform 450ms;
 }
@@ -25,17 +26,18 @@
     width: 240px;
     border-radius: 4px;
     cursor: pointer;
+    
 }
-.card {
+.card-link {
     transition: .5s;
 }
-.card:hover {
+.card-link:hover {
     transform: scale(1.10);
 }
-.card-list .card {
+.card-list .card-link {
     position: relative;
 }
-.card-list .card p {
+.card-list .card-link p {
     position:absolute;
     bottom: 10px;
     right: 10px;
