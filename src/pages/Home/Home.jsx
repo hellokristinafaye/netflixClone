@@ -50,7 +50,8 @@ const Home = (index) => {
       <div className="hero">
         <img src={SinnersBanner} alt="" className="banner-img" />
         <div className="hero-caption">
-          <img src={hero_title} alt="" className="caption-img" />
+                  {/* <img src={hero_title} alt="" className="caption-img" /> */}
+                  <h1 className="hero-title">SINNERS</h1>
           <p className="">
             Trying to leave their troubled lives behind, twin brothers return to
             their hometown to start again, only to discover that an even greater
