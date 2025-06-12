@@ -6,9 +6,8 @@ import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import TitleCards from '../../components/TitleCards/TitleCards'
 import Footer from '../../components/Footer/Footer'
-// assets. provided by Great Stack
-import hero_banner from '../../assets/hero_banner.jpg'
-import hero_title from '../../assets/hero_title.png'
+// assets. provided by Great Stack, except for the Sinners Banner
+import SinnersBanner from "../../assets/SinnersBanner.png";
 import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
 import { Link } from 'react-router-dom'
@@ -47,32 +46,29 @@ const Home = (index) => {
     <div className="home">
       <Navbar />
       <div className="hero">
-        <img src={hero_banner} alt="" className="banner-img" />
+        <img src={SinnersBanner} alt="" className="banner-img" />
         <div className="hero-caption">
-          <img src={hero_title} alt="" className="caption-img" />
+          <h1 className="hero-title">SINNERS</h1>
           <p className="">
-            Discovering his ties to a secret ancient order, a young man living
-            in modern Istanbul embarks on a quest to save the city from an
-            immortal enemy.
+            Trying to leave their troubled lives behind, twin brothers return to
+            their hometown to start again, only to discover that an even greater
+            evil is waiting to welcome them back.
           </p>
           <div className="hero-btns">
-        
-
-            <Link
-              to={`/player/${apiData.id}`}
-              className="card"
-              key={index}
-            >
+            <Link to={`/player/${apiData.id}`} className="card" key={index}>
               <button className="btn">
                 <img src={play_icon} alt="" className="" />
                 Play
               </button>
             </Link>
 
-            <button className="btn dark-btn">
-              <img src={info_icon} alt="" className="" />
-              More Info
-            </button>
+            <Link to={`/player/${apiData.id}`} className="card" key={index}>
+              <button className="btn dark-btn">
+                <img src={info_icon} alt="" className="" />
+                More Info
+              </button>
+            </Link>
+                      
           </div>
           <TitleCards />
         </div>

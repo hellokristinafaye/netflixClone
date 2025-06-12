@@ -56,3 +56,8 @@
 .more-cards {
     padding-left: 6%;
 }
+.hero-title {
+    font-size: 100px;
+    color: #FBF910;
+    font-weight: 500;
+}
