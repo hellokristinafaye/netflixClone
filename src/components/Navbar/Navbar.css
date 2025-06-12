@@ -54,7 +54,7 @@
     position: relative;
 }
 
-.navbar .dropdown {
+.navbar-right .dropdown {
     position: absolute;
     top: 100%;
     right: 0;
@@ -68,8 +68,12 @@
     cursor: pointer;
 }
 
-.navbar .dropdown p {
+.dropdown {
     font-size: 13px;
+    cursor: pointer;
+}
+
+.pointer {
     cursor: pointer;
 }
 

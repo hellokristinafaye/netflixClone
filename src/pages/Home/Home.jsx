@@ -1,21 +1,20 @@
 // necessary for using React
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 // styling for this page
-import './Home.css'
-// components that I coded 
-import Navbar from '../../components/Navbar/Navbar'
-import TitleCards from '../../components/TitleCards/TitleCards'
-import Footer from '../../components/Footer/Footer'
+import "./Home.css";
+// components that I coded
+import Navbar from "../../components/Navbar/Navbar";
+import TitleCards from "../../components/TitleCards/TitleCards";
+import Footer from "../../components/Footer/Footer";
 // assets. provided by Great Stack, except for the Sinners Banner
 import SinnersBanner from "../../assets/SinnersBanner.png";
-import play_icon from '../../assets/play_icon.png'
-import info_icon from '../../assets/info_icon.png'
-import { Link } from 'react-router-dom'
+import play_icon from "../../assets/play_icon.png";
+import info_icon from "../../assets/info_icon.png";
+import { Link } from "react-router-dom";
 
-// so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL 
+// so this is a function that returns JSX.  And then we export the function to the App file, which then displays code depending on which route is used in the URL
 const Home = (index) => {
-
-    const [apiData, setApiData] = useState([]);
+  const [apiData, setApiData] = useState([]);
 
   const options = {
     method: "GET",
@@ -26,21 +25,15 @@ const Home = (index) => {
     },
   };
 
-
-
-   
-    useEffect(() => {
-         fetch(
-           "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
-           options
-         )
-           .then((res) => res.json())
-           .then((res) => setApiData(res.results[3]))
-           .catch((err) => console.error(err));
- 
-    },[])
-    
-
+  useEffect(() => {
+    fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+      options
+    )
+      .then((res) => res.json())
+      .then((res) => setApiData(res.results[3]))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <div className="home">
@@ -68,7 +61,6 @@ const Home = (index) => {
                 More Info
               </button>
             </Link>
-                      
           </div>
           <TitleCards />
         </div>
@@ -82,6 +74,6 @@ const Home = (index) => {
       <Footer />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
