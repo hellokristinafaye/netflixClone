@@ -1,43 +1,51 @@
 .navbar {
     width: 100%;
-    padding: 20px 6%;
+    padding: 20px 3%;
     display: flex;
     justify-content: space-between;
     position: fixed;
     font-size: 14px;
     color: #e5e5e5;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
     z-index: 1;
 }
+
 .navbar-left {
     display: flex;
     align-items: center;
     gap: 50px;
 }
+
 .navbar-left img {
     width: 90px;
-} 
-.navbar-left ul{
+}
+
+.navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
+
 .navbar-left ul li {
     cursor: pointer;
 }
+
 .navbar-right {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .navbar-right .icons {
     width: 20px;
     cursor: pointer;
 }
+
 .navbar-right .profile {
     border-radius: 4px;
     width: 35px;
 }
+
 .navbar-profile {
     display: flex;
     align-items: center;
@@ -45,6 +53,7 @@
     cursor: pointer;
     position: relative;
 }
+
 .navbar .dropdown {
     position: absolute;
     top: 100%;
@@ -56,15 +65,20 @@
     text-decoration: underline;
     z-index: 1;
     display: none;
+    cursor: pointer;
 }
+
 .navbar .dropdown p {
     font-size: 13px;
     cursor: pointer;
 }
+
 .navbar-profile:hover .dropdown {
     display: block;
 }
+
 .nav-dark {
     background: #141414;
 }
+
 /* at this point the app is DONE.  the next steps require FireBase (user creation, authentication, hosting, etc) */
