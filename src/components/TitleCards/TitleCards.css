@@ -12,8 +12,7 @@
 }
 .card-image {
     width: 100%;
-        object-fit: contain;
-        /* max-height: 100px; */
+        object-fit: cover;
         margin-right: 5px;
         transition: transform 450ms;
 }
@@ -31,7 +30,7 @@
     transition: .5s;
 }
 .card:hover {
-    transform: scale(1.15);
+    transform: scale(1.10);
 }
 .card-list .card {
     position: relative;
