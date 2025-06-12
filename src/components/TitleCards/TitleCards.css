@@ -10,6 +10,13 @@
     gap: 10px;
     overflow-x: scroll;
 }
+.card-image {
+    width: 100%;
+        object-fit: contain;
+        /* max-height: 100px; */
+        margin-right: 5px;
+        transition: transform 450ms;
+}
 /* possibly unnecessary b/c it's hiding the scroll bar which doesn't really show up on this version */
 .card-list::-webkit-scrollbar{
     display: none;
@@ -19,6 +26,12 @@
     width: 240px;
     border-radius: 4px;
     cursor: pointer;
+}
+.card {
+    transition: .5s;
+}
+.card:hover {
+    transform: scale(1.15);
 }
 .card-list .card {
     position: relative;
