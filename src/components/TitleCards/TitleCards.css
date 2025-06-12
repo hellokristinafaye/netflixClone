@@ -2,6 +2,7 @@
     margin-top: 50px;
     margin-bottom: 30px;
 }
+
 /* .title-cards h2 {
     margin-bottom: 8px;
 } */
@@ -12,33 +13,40 @@
     overflow-y: hidden;
     padding-top: 10px;
 }
+
 .card {
 
-        margin-right: 5px;
-        transition: transform 450ms;
+    margin-right: 5px;
+    transition: transform 450ms;
 }
+
 /* possibly unnecessary b/c it's hiding the scroll bar which doesn't really show up on this version */
-.card-list::-webkit-scrollbar{
+.card-list::-webkit-scrollbar {
     display: none;
 }
+
 /* ok it does hide it, but the scroll bar wasn't really offensive to begin with */
 .card-list img {
     width: 240px;
     border-radius: 4px;
     cursor: pointer;
-    
+
 }
+
 .card-link {
-    transition: .5s;
+    transition: .4s;
 }
+
 .card-link:hover {
     transform: scale(1.10);
 }
+
 .card-list .card-link {
     position: relative;
 }
+
 .card-list .card-link p {
-    position:absolute;
+    position: absolute;
     bottom: 10px;
     right: 10px;
     text-decoration: none;
