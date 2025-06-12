@@ -48,14 +48,14 @@ const Home = (index) => {
             evil is waiting to welcome them back.
           </p>
           <div className="hero-btns">
-            <Link to={`/player/${apiData.id}`} className="card" key={index}>
+            <Link to={`/player/1233413`} className="card" key={index}>
               <button className="btn">
                 <img src={play_icon} alt="" className="" />
                 Play
               </button>
             </Link>
 
-            <Link to={`/player/${apiData.id}`} className="card" key={index}>
+            <Link to={`/player/1233413`} className="card" key={index}>
               <button className="btn dark-btn">
                 <img src={info_icon} alt="" className="" />
                 More Info
