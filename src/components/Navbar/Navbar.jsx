@@ -24,14 +24,14 @@ const Navbar = () => {
     <div className='navbar' ref={navRef}>
           <div className="navbar-left">
               <img src={logo} alt="" className="" />
-              <ul>
+              {/* <ul>
                   <li>Home</li>
                   <li>TV Shows</li>
                   <li>Movies</li>
                   <li>New & Popular</li>
                   <li>My List</li>
                   <li>Browse by Language</li>
-              </ul>
+              </ul> */}
         </div>
           <div className="navbar-right">
               <img src={search_icon} alt="" className="icons" />
