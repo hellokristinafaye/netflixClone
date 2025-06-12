@@ -52,9 +52,9 @@ const Home = (index) => {
         <div className="hero-caption">
           <img src={hero_title} alt="" className="caption-img" />
           <p className="">
-            Discovering his ties to a secret ancient order, a young man living
-            in modern Istanbul embarks on a quest to save the city from an
-            immortal enemy.
+            Trying to leave their troubled lives behind, twin brothers return to
+            their hometown to start again, only to discover that an even greater
+            evil is waiting to welcome them back.
           </p>
           <div className="hero-btns">
             <Link to={`/player/${apiData.id}`} className="card" key={index}>
